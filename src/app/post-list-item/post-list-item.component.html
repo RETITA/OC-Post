@@ -1,0 +1,18 @@
+<div [ngClass]="{'list-group-item': true,
+'list-group-item-success': postLoveIts > 0,
+'list-group-item-danger': postLoveIts < 0 }">
+  <span class="float-right"><i>Mis à jour : {{ postCreated_at | date : 'short'}}</i></span>
+  <h4>{{ postTitle }}</h4>
+  <p>{{ postContent }}</p>
+  <button class="btn green darken-4"  (click)="onLove()"><i class="material-icons">
+    thumb_up
+    </i></button>
+  <button class="btn red darken-4"  (click)="onDontLove()"><i class="material-icons">
+    thumb_down
+    </i></button>
+    <button class="float-right btn red darken-4"  (click)="onRemove()"><i class="material-icons">
+        delete
+        </i></button>
+</div>
+  
+
